@@ -124,6 +124,10 @@ def SixthOne(rocket,fuel):
     if(rocket == 3 & fuel == 1):
         print("| >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> |")
         PeopleSpeaking("Scientist","nice job,captain!Now you may start your trip.")
+        print("|")
+        print("|")
+        return
+
    #leave some blank
     print("|")
     print("|")

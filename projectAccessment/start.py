@@ -5,6 +5,8 @@ from EN import*
 from LaunchRocket import*
 from LifeInTheSpace import*
 from LandingOnMars import*
+from marrss import*
+from Leaving import*
 
 #chinese,still developing
 from CH import*
@@ -18,6 +20,7 @@ def startMission():
     LaunchRocket()
     InSpace()
     MarsLanding()
+    onMars()
 
 #select which language does the player wants to use
 print("choose your language请选择您的语言:")

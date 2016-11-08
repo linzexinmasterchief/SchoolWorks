@@ -92,19 +92,20 @@ def choiceInput(c1,c2):
 #function used:print()
 
 def SystemSpeaking(text):
-    print("| system  [",text,"]")
+    print("| system  [",text,"]\n| ")
 
 def PeopleSpeaking(name,text):
-    print("|",name,":",text)
+    print("|",name,":",text,"\n| ")
 
 def PlayerSpeaking():
-    return print("| > "),
+    return print("| > \n| "),
 
 # no error in this part 2016-10-30-12-01 by @Michael 3778
 
 #mission ends
 
 def END():
+    print("-------MISSION FAILED!--------")
     print("Do you want to stop your journy?")
     answer = choiceInput("Yes!stop!", "ah...wait a second...")
     if(answer == 1):
