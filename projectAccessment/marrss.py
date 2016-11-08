@@ -150,9 +150,9 @@ def NinthOne():
     SystemSpeaking("Dangerous! What do you want to do?")
     answer = choiceInput("wait for instruction from NASA","examine it by yourself")
 
-    if (answer == 1):
+    if (answer == 2):
         print("| It is indeed fuel leakage…Please remember, stay away from any explosives. They may explode at any time.\n| Unfortunately, you are killed in this explosion.")
-    elif(answer == 2):
+    elif(answer == 1):
         PeopleSpeaking("NASA","NASA Houston: Astronaut, there is an alternative way to go home. You can look for Schiaparelli lander. There may be components necessary for taking off from Mars.")
 
     return

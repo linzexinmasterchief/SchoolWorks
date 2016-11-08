@@ -1,3 +1,4 @@
+#section created by Johnson G2.Y To carry out the preparation before launch
 #Last modify 2016-10-29-23-23
 
 from lib import*

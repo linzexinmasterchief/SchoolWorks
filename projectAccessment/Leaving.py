@@ -1,6 +1,9 @@
+#section created by Blake G2.Y To carry out the leaving process
 #@Auther Blake
 
 from lib import*
+
+name = " "
 
 #----------------------------------1 choice---------------------------------
 def LeftMars():
@@ -75,21 +78,58 @@ def SixthOne():
     if(answer == 2):
         SystemSpeaking("soil on Mars doesn’t contain some elements for wheat growing!")
         END()
-        FifthOne()
+        SixthOne()
     elif(answer == 1):
         PeopleSpeaking("System","soil on Mars is good for potatoes growing")
-        SixthOne()
+        SeventhOne()
     return
 
-#----------------------------------6 choice---------------------------------
+#----------------------------------7 choice---------------------------------
 def SeventhOne():
     PeopleSpeaking("System","Growing of potatoes needs Nitrogen, you would get Nitrogen from")
-    answer = choiceInput("Potato\n| ","wheat")
+    answer = choiceInput("faeces\n| ","decompose hydrazine")
     if(answer == 2):
-        SystemSpeaking("soil on Mars doesn’t contain some elements for wheat growing!")
+        SystemSpeaking("dangerous and explosive!")
         END()
         SeventhOne()
     elif(answer == 1):
-        PeopleSpeaking("System","soil on Mars is good for potatoes growing")
+        PeopleSpeaking("System","Safe and easy to get")
         EighthOne()
     return
+
+#----------------------------------8 choice---------------------------------
+def EighthOne():
+    PeopleSpeaking("System","While the ship arrive at Mars, to save time and fuel\n| the ship doesn’t plan to land, you drive your ship next to the ship, you would")
+    answer = choiceInput("manual operation butt joint\n| ","abandon your ship and get into the other ship")
+    if(answer == 1):
+        SystemSpeaking("manual operation is very dangerous!")
+        END()
+        EighthOne()
+    elif(answer == 2):
+        PeopleSpeaking("System","get into the ship safely")
+        Next()
+    return
+
+#------------------------------------next-----------------------------------
+def Next():
+    print("| You've completed your mission and survived from all the dangers!")
+    print("| Leave your name and let people remember you!")
+    #use global variable to pass the value
+    name = TextInput("| your name: ")
+    Prize(name)
+
+#-----------------------------------Prize-----------------------------------
+def Prize(name):
+    print("     +------------+")
+    print("    /              \\")
+    print("   /   ",name,"   \\")
+    print("   |                 |")
+    print("   | the first human |")
+    print("   |                 |")
+    print("   |    on mars!     |")
+    print("   |                 |")
+    print("   \\                /")
+    print("    +---------------+")
+    print("    /  /  /  /\\  \\  \\  \\")
+    print("   /  /  /  /  \\  \\  \\  \\")
+    print("  +--+--+--+    +--+--+--+")

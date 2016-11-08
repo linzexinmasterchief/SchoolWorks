@@ -1,3 +1,4 @@
+#section created by Blake G2.Y To provide the entry for the program
 #Last modify 2016-10-29-23-23
 #@Auther Blake
 from Title import*
@@ -21,6 +22,7 @@ def startMission():
     InSpace()
     MarsLanding()
     onMars()
+    LeftMars()
 
 #select which language does the player wants to use
 print("choose your language请选择您的语言:")

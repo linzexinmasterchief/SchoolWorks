@@ -1,3 +1,5 @@
+#section created by Michael 3778 G2.Y on 8/11 To carry out an the first chinese part
+
 from lib import*
 #chinese version
 def CHmain():

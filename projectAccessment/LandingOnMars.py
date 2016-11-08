@@ -1,3 +1,4 @@
+#section created by Michael G2.Y on 8/11 To carry out the landing on Mars
 #Last modify 2016-10-29-23-23
 #@Auther Michael 3778
 
@@ -57,7 +58,7 @@ def ForthOne():
     answer = choiceInput("what...","what...")
     if(answer == 1):
         FifthOne()
-        ForthOne()
+        Second()
     elif(answer == 2):
         FifthOne()
         ForthOne()
