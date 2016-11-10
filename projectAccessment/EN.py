@@ -44,7 +44,7 @@ def secondOne():
 #launch if player say "Hi"    
 def secondTwo():
     PeopleSpeaking("Earth", "Hi,captain.")
-    answer = choiceInput("anything need me to do?", "...")
+    answer = choiceInput("anything need me to do?", "say nothing")
     if(answer == 1):
         #send the mission
         ThirdOne()
@@ -97,7 +97,7 @@ def fifthOne():
     print("           You may decide how to make your space ship in the develop lab")
     print("           May luck and our wish be with you")
     PeopleSpeaking("System","--message ends--")
-    answer = choiceInput("...","go to develop lab")
+    answer = choiceInput("say nothing","go to develop lab")
     if(answer == 2):
         #Next level
         Next()

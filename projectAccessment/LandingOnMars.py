@@ -92,7 +92,7 @@ def FifthOne():
 
 def FifthTwo():
     PeopleSpeaking("System","WARNING, parachute overload")
-    answer = choiceInput("close the parachute","...")
+    answer = choiceInput("close the parachute","do nothing")
     if(answer == 1):
         FifthOne()
         FifthTwo()
@@ -102,7 +102,7 @@ def FifthTwo():
 
 def FifthThree():
     PeopleSpeaking("System","WARNING, parachute overload")
-    answer = choiceInput("close the parachute","...")
+    answer = choiceInput("close the parachute","do nothing")
     if(answer == 1):
         SixthOne()
     elif(answer == 2):
@@ -113,7 +113,7 @@ def FifthThree():
 #----------------------------------6 choice---------------------------------
 def SixthOne():
     PeopleSpeaking("System","reaches landing speed, now you can land on mars")
-    answer = choiceInput("land","...")
+    answer = choiceInput("land","do nothing")
     if(answer == 1):
         SeventhOne()
     elif(answer == 2):
