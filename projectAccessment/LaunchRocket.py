@@ -7,13 +7,18 @@ from lib import*
 rocket = 0
 #fuel choosed
 fuel = 0
+#database
+resource = [fuel,rocket]
+#print the resouce you used
+#def printResource():
+#    for i in resource:
+#        print i
 
 #----------------------------------1 choice---------------------------------
 #launch first
 def LaunchRocket():
     PeopleSpeaking("System", "Entering the lab...")
     PeopleSpeaking("Scientist","welecom,captain.We are going to help you to build your spaceship")
-    
     answer = choiceInput("How?", "Thanks")
     if(answer == 1):
         #Explain a little
