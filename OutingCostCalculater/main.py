@@ -1,3 +1,7 @@
+#Last modify 2017-1-3-20-46
+#@Auther Michael 3778
+#@version 1.0
+
 from StrongerInput import*
 """
 introduction:
