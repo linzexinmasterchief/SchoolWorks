@@ -122,6 +122,5 @@ def TaskThree(DataOne,DataTwo):
     return 0
 """main program"""
 DataOne = TaskOne()
-print(DataOne[0])
 DataTwo = TaskTwo(DataOne)
 DataThree = TaskThree(DataOne,DataTwo)
