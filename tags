@@ -6,12 +6,18 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 CH.py	E:\GitHub\comuter_science_works\TravelToMars\CH.py	1;"	kind:file	line:1
 CHmain	E:\GitHub\comuter_science_works\TravelToMars\CH.py	/^def CHmain():$/;"	kind:function	line:5
-DataOne	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^DataOne   = []$/;"	kind:variable	line:30
-DataOne	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^DataOne = TaskOne()$/;"	kind:variable	line:124
-DataThree	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^DataThree = 0$/;"	kind:variable	line:34
-DataThree	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^DataThree = TaskThree(DataOne,DataTwo)/;"	kind:variable	line:126
-DataTwo	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^DataTwo   = 0.00$/;"	kind:variable	line:32
-DataTwo	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^DataTwo = TaskTwo(DataOne)$/;"	kind:variable	line:125
+DataOne	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^DataOne = TaskOne()$/;"	kind:variable	line:160
+DataOne	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^DataOne = []$/;"	kind:variable	line:32
+DataOne	E:\GitHub\comuter_science_works\OutingCostCalculater\release\MainImproved.py	/^DataOne   = []$/;"	kind:variable	line:101
+DataOne	E:\GitHub\comuter_science_works\OutingCostCalculater\release\MainImproved.py	/^DataOne = TaskOne()$/;"	kind:variable	line:230
+DataThree	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^DataThree = 0$/;"	kind:variable	line:36
+DataThree	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^DataThree = TaskThree(DataTwo)/;"	kind:variable	line:162
+DataThree	E:\GitHub\comuter_science_works\OutingCostCalculater\release\MainImproved.py	/^DataThree = 0$/;"	kind:variable	line:105
+DataThree	E:\GitHub\comuter_science_works\OutingCostCalculater\release\MainImproved.py	/^DataThree = TaskThree(DataTwo)$/;"	kind:variable	line:232
+DataTwo	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^DataTwo = 0.00$/;"	kind:variable	line:34
+DataTwo	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^DataTwo = TaskTwo(DataOne)$/;"	kind:variable	line:161
+DataTwo	E:\GitHub\comuter_science_works\OutingCostCalculater\release\MainImproved.py	/^DataTwo   = 0.00$/;"	kind:variable	line:103
+DataTwo	E:\GitHub\comuter_science_works\OutingCostCalculater\release\MainImproved.py	/^DataTwo = TaskTwo(DataOne)$/;"	kind:variable	line:231
 E	E:\GitHub\comuter_science_works\pythonStudy\plunk.py	/^E = 0.00000000000000000016$/;"	kind:variable	line:2
 EN.py	E:\GitHub\comuter_science_works\TravelToMars\EN.py	1;"	kind:file	line:1
 END	E:\GitHub\comuter_science_works\TravelToMars\lib.py	/^def END():$/;"	kind:function	line:110
@@ -45,6 +51,7 @@ LaunchRocket.py	E:\GitHub\comuter_science_works\TravelToMars\LaunchRocket.py	1;"
 Leaving.py	E:\GitHub\comuter_science_works\TravelToMars\Leaving.py	1;"	kind:file	line:1
 LeftMars	E:\GitHub\comuter_science_works\TravelToMars\Leaving.py	/^def LeftMars():$/;"	kind:function	line:9
 LifeInTheSpace.py	E:\GitHub\comuter_science_works\TravelToMars\LifeInTheSpace.py	1;"	kind:file	line:1
+MainImproved.py	E:\GitHub\comuter_science_works\OutingCostCalculater\release\MainImproved.py	1;"	kind:file	line:1
 MarsLanding	E:\GitHub\comuter_science_works\TravelToMars\LandingOnMars.py	/^def MarsLanding():$/;"	kind:function	line:9
 Matched	E:\GitHub\comuter_science_works\pythonStudy\Matched.py	/^def Matched(String1, String2):$/;"	kind:function	line:1
 Matched.py	E:\GitHub\comuter_science_works\pythonStudy\Matched.py	1;"	kind:file	line:1
@@ -53,6 +60,7 @@ Next	E:\GitHub\comuter_science_works\TravelToMars\EN.py	/^def Next():$/;"	kind:f
 Next	E:\GitHub\comuter_science_works\TravelToMars\Leaving.py	/^def Next():$/;"	kind:function	line:114
 NinthOne	E:\GitHub\comuter_science_works\TravelToMars\marrss.py	/^def NinthOne():$/;"	kind:function	line:146
 NumInput	E:\GitHub\comuter_science_works\OutingCostCalculater\StrongerInput.py	/^def NumInput(context):$/;"	kind:function	line:21
+NumInput	E:\GitHub\comuter_science_works\OutingCostCalculater\release\MainImproved.py	/^def NumInput(context):$/;"	kind:function	line:22
 NumInput	E:\GitHub\comuter_science_works\TravelToMars\lib.py	/^def NumInput(context):$/;"	kind:function	line:25
 Out	E:\GitHub\comuter_science_works\pythonStudy\OutputByOddAndEven.py	/^    Out = []$/;"	kind:variable	line:10
 OutputByOddAndEven.py	E:\GitHub\comuter_science_works\pythonStudy\OutputByOddAndEven.py	1;"	kind:file	line:1
@@ -60,6 +68,7 @@ PeopleSpeaking	E:\GitHub\comuter_science_works\TravelToMars\lib.py	/^def PeopleS
 PlayerSpeaking	E:\GitHub\comuter_science_works\TravelToMars\lib.py	/^def PlayerSpeaking():$/;"	kind:function	line:103
 Prize	E:\GitHub\comuter_science_works\TravelToMars\Leaving.py	/^def Prize(name):$/;"	kind:function	line:122
 RangeNumberInput	E:\GitHub\comuter_science_works\OutingCostCalculater\StrongerInput.py	/^def RangeNumberInput(context, range1, range2):$/;"	kind:function	line:57
+RangeNumberInput	E:\GitHub\comuter_science_works\OutingCostCalculater\release\MainImproved.py	/^def RangeNumberInput(context, range1 = 0, range2 = 0):$/;"	kind:function	line:58
 RangeNumberInput	E:\GitHub\comuter_science_works\TravelToMars\lib.py	/^def RangeNumberInput(context, range1, range2):$/;"	kind:function	line:65
 Second	E:\GitHub\comuter_science_works\TravelToMars\LandingOnMars.py	/^def Second():$/;"	kind:function	line:25
 SecondOne	E:\GitHub\comuter_science_works\TravelToMars\LaunchRocket.py	/^def SecondOne():$/;"	kind:function	line:36
@@ -80,10 +89,14 @@ String2	E:\GitHub\comuter_science_works\pythonStudy\Matched.py	/^    String2 = i
 String2	E:\GitHub\comuter_science_works\pythonStudy\Matched.py	/^String2 = ""$/;"	kind:variable	line:44
 StrongerInput.py	E:\GitHub\comuter_science_works\OutingCostCalculater\StrongerInput.py	1;"	kind:file	line:1
 SystemSpeaking	E:\GitHub\comuter_science_works\TravelToMars\lib.py	/^def SystemSpeaking(text):$/;"	kind:function	line:97
-TaskOne	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^def TaskOne():$/;"	kind:function	line:36
-TaskThree	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^def TaskThree(DataOne,DataTwo):$/;"	kind:function	line:114
-TaskTwo	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^def TaskTwo(DataOne):$/;"	kind:function	line:81
+TaskOne	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^def TaskOne():$/;"	kind:function	line:38
+TaskOne	E:\GitHub\comuter_science_works\OutingCostCalculater\release\MainImproved.py	/^def TaskOne():$/;"	kind:function	line:107
+TaskThree	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^def TaskThree(DataOne):$/;"	kind:function	line:155
+TaskThree	E:\GitHub\comuter_science_works\OutingCostCalculater\release\MainImproved.py	/^def TaskThree(DataOne):$/;"	kind:function	line:225
+TaskTwo	E:\GitHub\comuter_science_works\OutingCostCalculater\main.py	/^def TaskTwo(DataOne):$/;"	kind:function	line:87
+TaskTwo	E:\GitHub\comuter_science_works\OutingCostCalculater\release\MainImproved.py	/^def TaskTwo(DataOne):$/;"	kind:function	line:156
 TextInput	E:\GitHub\comuter_science_works\OutingCostCalculater\StrongerInput.py	/^def TextInput(context):$/;"	kind:function	line:40
+TextInput	E:\GitHub\comuter_science_works\OutingCostCalculater\release\MainImproved.py	/^def TextInput(context):$/;"	kind:function	line:41
 TextInput	E:\GitHub\comuter_science_works\TravelToMars\lib.py	/^def TextInput(context):$/;"	kind:function	line:45
 ThirdOne	E:\GitHub\comuter_science_works\TravelToMars\EN.py	/^def ThirdOne():$/;"	kind:function	line:58
 ThirdOne	E:\GitHub\comuter_science_works\TravelToMars\LandingOnMars.py	/^def ThirdOne():$/;"	kind:function	line:36
@@ -111,6 +124,7 @@ c	E:\GitHub\comuter_science_works\pythonStudy\plunk.py	/^c = 300000000$/;"	kind:
 checkInput.py	E:\GitHub\comuter_science_works\pythonStudy\checkInput.py	1;"	kind:file	line:1
 checkInput1.py	E:\GitHub\comuter_science_works\pythonStudy\checkInput1.py	1;"	kind:file	line:1
 checkType	E:\GitHub\comuter_science_works\OutingCostCalculater\StrongerInput.py	/^def checkType(INPUT, TYPE):$/;"	kind:function	line:8
+checkType	E:\GitHub\comuter_science_works\OutingCostCalculater\release\MainImproved.py	/^def checkType(INPUT, TYPE):$/;"	kind:function	line:9
 checkType	E:\GitHub\comuter_science_works\TravelToMars\lib.py	/^def checkType(INPUT, TYPE):$/;"	kind:function	line:12
 choiceInput	E:\GitHub\comuter_science_works\TravelToMars\lib.py	/^def choiceInput(c1,c2):$/;"	kind:function	line:84
 fifthOne	E:\GitHub\comuter_science_works\TravelToMars\EN.py	/^def fifthOne():$/;"	kind:function	line:94
