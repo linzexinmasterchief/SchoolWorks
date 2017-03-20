@@ -1,5 +1,5 @@
 # -*- coding: cp936 -*-
-print("九九乘法表")
+print("锟脚九乘凤拷锟斤拷")
 a = 1
 for i in range(1, 10):
     b = 0
@@ -7,5 +7,3 @@ for i in range(1, 10):
         b += 1
         print(i,"*",b,"=",i*b,"|",end=" ")
     print("\n")
-    
-    
