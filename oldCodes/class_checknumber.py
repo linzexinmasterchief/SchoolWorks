@@ -9,7 +9,7 @@ while True:
     e = 1000 * a + 100 * b + 10 * c + d
     x = 0
     try:
-        x = int(input("ÇëÊäÈëÊı×Ö:"))
+        x = int(input("input check number:"))
     except:
         pass
     if x == e:

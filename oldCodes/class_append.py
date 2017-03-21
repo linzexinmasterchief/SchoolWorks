@@ -15,7 +15,7 @@ classhigh3 = 0
 classlow1 = 9999
 classlow2 = 9999
 classlow3 = 9999
-   
+
 for i in range(3):
     name = input("name:")
     StudentName.append(name)

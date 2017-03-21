@@ -1,5 +1,5 @@
 # -*- coding: cp936 -*-
-print("�žų˷���")
+print("chengFaBiao")
 a = 1
 for i in range(1, 10):
     b = 0
