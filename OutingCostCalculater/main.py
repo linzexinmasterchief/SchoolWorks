@@ -28,6 +28,7 @@ program user guide:
 
 Have fun with the program!
 """
+
 #an array with information from TaskOne in it
 DataOne = []
 #total money
