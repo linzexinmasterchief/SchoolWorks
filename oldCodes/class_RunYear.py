@@ -1,62 +1,60 @@
 # -*- coding: cp936 -*-
 import time
 h=0
-for count in range(1,4):
+for count in range(1, 4):
     password = 0
     try:
-        password = int(input("请输入密码"))
+        password = int(input("enter password:"))
     except:
         pass
     h += 1
     if password == 123:
         print("welcome back!")
-        print("===============================闰年查询器===================================")
+        print("===============================[welecome]===================================")
         print("v1.0.0")
-        print("现在是")
-        print(time.strftime('%Y/%m/%d',time.localtime(time.time())))
-        print(time.strftime('%H:%M:%S',time.localtime(time.time())))
-        print("------------------------------作者：林泽昕----------------------------------")
+        print("today is")
+        print(time.strftime('%Y/%m/%d', time.localtime(time.time())))
+        print(time.strftime('%H:%M:%S', time.localtime(time.time())))
+        print("----------------------------------------------------------------------------")
         x = 0
         try:
-            x = int(input("次数:"))
+            x = int(input("times:"))
         except:
             pass
         for i in range(1, x + 1):
             year = 0
             try:
-                year = int(input("输入年份:"))
+                year = int(input("years:"))
             except:
                 pass
             if year % 4 == 0:
                 if year % 100 == 0:
                     if year % 400 == 0:
-                        print(year,"年是闰年")
+                        print(year, "is run year")
                     else:
-                        print(year,"年不是闰年")
+                        print(year, "is not run year")
                 else:
-                    print(year,"年是闰年")
+                    print(year, "is run year")
             else:
-                print(year,"年不是闰年")
+                print(year, "is not run year")
         restart = 2
         try:
-            restart = int(input("是否重新启动？（1=是，0=不是）"))
+            restart = int(input("do you want to restart?(1=yes, 0=no)"))
         except:
             pass
         if restart == 1:
-            print("重新启动")
+            continue
         elif restart == 0:
             break
         else:
-            print("你不识字吗？")
-            print("系统自动重启")
-    
+            print("are you silly?")
+            continue
     else:
-        print("密码不正确!!!")
-        print("请重新输入!!!")
+        print("wrong password!!!")
+        print("Enter again!!!")
 
 
 if h >= 3:
-    print("别试了，想知道密码就去问作者啊")
+    print("tried 3 times, exiting")
 else:
-    print("程序结束")
-    print("欢迎下次使用！     :D")
+    print("thank you for using")

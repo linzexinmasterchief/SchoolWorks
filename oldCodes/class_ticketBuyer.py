@@ -2,7 +2,7 @@
 while True:
     a = 0
     try:
-        a = int(input("Æ±Êı"))
+        a = int(input("enter ticket number:"))
     except:
         pass
     if a < 0:

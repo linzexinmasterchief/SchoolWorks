@@ -7,9 +7,9 @@ def pwd_input():
         try:  
             newChar = msvcrt.getch().decode(encoding="utf-8")  
         except:  
-            return input("你很可能不是在cmd命令行下运行，密码输入将不能隐藏:")  
-        if newChar in '\r\n': # 如果是换行，则输入结束               
-             break   
+            return input("you are not using cmd, password may not be hiden:")  
+        if newChar in '\r\n': # 如果是换行，则输入结束
+             break
         elif newChar == '\b': # 如果是退格，则删除密码末尾一位并且删除一个星号   
              if chars:    
                  del chars[-1]   
