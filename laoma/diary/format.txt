@@ -1,0 +1,3 @@
+Weather: Sunny
+Date: 2016-12-23
+

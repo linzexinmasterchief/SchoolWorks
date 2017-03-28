@@ -1,0 +1,1 @@
+ParametricPlot[{Sin[t] Cosh[E]*100, Cos[t] t + t/t^2 + t}, {t, -100*Pi, 100*Pi}]

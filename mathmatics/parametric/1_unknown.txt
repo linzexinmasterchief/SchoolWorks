@@ -1,0 +1,1 @@
+ParametricPlot[{Cos[t] t + t/t^2 + t, Sin[t] t}, {t, 1, 100*Pi}]

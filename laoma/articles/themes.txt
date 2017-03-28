@@ -1,0 +1,16 @@
+v	Friend ship
+v	Love
+v	Politics
+v	Dream
+v	Money
+v	Relationship
+v	Ambition
+v	Familiy
+v	IT
+v	Democracy
+v	Party
+v	Trust
+v	Fashion
+v	muli-Culture
+v	Festival
+v	Exam
