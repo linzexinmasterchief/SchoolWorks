@@ -1,3 +1,3 @@
-# computerScienceWorks
-computer science class works
+# SchoolWorks
+School works\n
 probably including all the works in class
