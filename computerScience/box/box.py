@@ -359,12 +359,16 @@ def gameDisplay(playerImage):
     # draw ground
     for i in range(0, len(mapArray)):
         for j in range(0, len(mapArray[i])):
+            # render grass
             if mapArray[i][j] == 0:
                 windowSurface.blit(grassTex, (bPos2pPos(j * block_size, i * block_size)[0] - 5 - camera_1_x, 465 - bPos2pPos(j * block_size, i * block_size)[1] + camera_1_y))
+            # render rock
             if mapArray[i][j] == 128:
                 windowSurface.blit(rockTex, (bPos2pPos(j * block_size, i * block_size)[0] - 5 - camera_1_x, 465 - bPos2pPos(j * block_size, i * block_size)[1] + camera_1_y))
+            # render dirt
             if mapArray[i][j] == 192:
                 windowSurface.blit(dirtTex, (bPos2pPos(j * block_size, i * block_size)[0] - 5 - camera_1_x, 465 - bPos2pPos(j * block_size, i * block_size)[1] + camera_1_y))
+            # render brick
             if mapArray[i][j] == 64:
                 windowSurface.blit(brickTex, (bPos2pPos(j * block_size, i * block_size)[0] - 5 - camera_1_x, 465 - bPos2pPos(j * block_size, i * block_size)[1] + camera_1_y))
 
