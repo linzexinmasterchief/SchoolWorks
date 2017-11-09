@@ -393,8 +393,8 @@ def pyg():
         menuControl()
         menuDisplay()
 
-# Prepare for simulation. Typically we use a time step of 1/60 of a
-# second (60Hz) and 6 velocity/2 position iterations. This provides a
+# Prepare for simulation. Typically we use a time step of 1/100 of a
+# second (100Hz) and 6 velocity/2 position iterations. This provides a
 # high quality simulation in most game scenarios.
 timeStep = 1.0 / 100
 vel_iters, pos_iters = 6, 2
