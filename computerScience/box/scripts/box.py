@@ -217,7 +217,7 @@ bulletTex = pygame.transform.scale(bulletImage, (bullet_size, bullet_size))
 
 # load player texture
 playerImage = pygame.image.load("..\\assets\\texture\\player.png").convert()
-playerHurtImage = pygame.image.load(".\\assets\\texture\\playerHurt.png").convert()
+playerHurtImage = pygame.image.load("..\\assets\\texture\\playerHurt.png").convert()
 playerTex = pygame.transform.scale(playerImage, (player_size_x, player_size_y))
 
 # load dirt texture
