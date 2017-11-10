@@ -99,7 +99,7 @@ def menuControl():
 # setup game assets
 
 # produce map
-mapArray = generateMap("map2.bmp")
+mapArray = generateMap(".\\assets\\map\\map2.bmp")
 
 # setup terrain list
 terrainList = []
@@ -212,28 +212,28 @@ enemy = player(400, 200, 100, 10, 100, 0)
 
 # load image
 # load bullet texture
-bulletImage = pygame.image.load("redbox.png").convert()
+bulletImage = pygame.image.load(".\\assets\\texture\\redbox.png").convert()
 bulletTex = pygame.transform.scale(bulletImage, (bullet_size, bullet_size))
 
 # load player texture
-playerImage = pygame.image.load("player.png").convert()
-playerHurtImage = pygame.image.load("playerHurt.png").convert()
+playerImage = pygame.image.load(".\\assets\\texture\\player.png").convert()
+playerHurtImage = pygame.image.load(".\\assets\\texture\\playerHurt.png").convert()
 playerTex = pygame.transform.scale(playerImage, (player_size_x, player_size_y))
 
 # load dirt texture
-dirtImage = pygame.image.load("dirt.png").convert()
+dirtImage = pygame.image.load(".\\assets\\texture\\dirt.png").convert()
 dirtTex = pygame.transform.scale(dirtImage, (int(block_size), int(block_size)))
 
 # load grass texture
-grassImage = pygame.image.load("grass.png").convert()
+grassImage = pygame.image.load(".\\assets\\texture\\grass.png").convert()
 grassTex = pygame.transform.scale(grassImage, (int(block_size), int(block_size)))
 
 # load rock texture
-rockImage = pygame.image.load("rock.png").convert()
+rockImage = pygame.image.load(".\\assets\\texture\\rock.png").convert()
 rockTex = pygame.transform.scale(rockImage, (int(block_size), int(block_size)))
 
 # load brick texture
-brickImage = pygame.image.load("brick.png").convert()
+brickImage = pygame.image.load(".\\assets\\texture\\brick.png").convert()
 brickTex = pygame.transform.scale(brickImage, (int(block_size), int(block_size)))
 
 def gameControl():
