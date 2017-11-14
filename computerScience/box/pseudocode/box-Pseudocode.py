@@ -41,7 +41,7 @@ FUNCTION menuDisplay():
     # initialize font; must be called after 'pygame.init()' to avoid 'Font not Initialized' errOR
     y <- 100
     # render text
-    for text in menu_items:
+    FOR text in menu_items:
         myfont <- pygame.font.SysFont("SimHei", 30)
         IF text = menu_items[menu_focus]:
             myfont <- pygame.font.SysFont("SimHei", 40)
@@ -74,7 +74,6 @@ FUNCTION menuControl():
             menu_time_delay <- 0
         # IF selected
         ENDIF
-          ENDIF
         IF keys[K_RETURN] = 1:
             IF menu_focus = 0:
                 mode <- "game"
@@ -84,12 +83,12 @@ FUNCTION menuControl():
             IF menu_focus = 3:
                 pygame.quit()
                 sys.exit(0)
-        ENDIF
             ENDIF
+        ENDIF
         IF keys[K_TAB] = 1:
             mode <- "game"
-    ENDIF
         ENDIF
+    ENDIF
     IF menu_time_delay >= 10000:
         menu_time_delay <- 20
     ENDIF
@@ -107,83 +106,76 @@ terrainList <- []
 world <- b2World()
 world.__SetGravity((0, -gravity))
 # create player CLASS
-                ENDCLASS
 
 CLASS player:
     # initialize method
     FUNCTION __init__(self, x <- 0, y <- 0, life_value <- 100, power_value <- 0, jet_energy_value <- 100, direction_value <- 1):
-                                      ENDIF
         # life set to 100
-           ENDIF
-         life <- life_value
-              ENDIF
-         direction <- direction_value
+        life <- life_value
+        direction <- direction_value
         # jet pack energy set to 100
-         jet_energy <- jet_energy_value
+        jet_energy <- jet_energy_value
         # power set to 10
-         power <- power_value
-        # record the last fire time to for bullet time delay effect
-                                       ENDFOR
-         last_fire_time <- 0
+        power <- power_value
+        # record the last fire time to FOR bullet time delay effect
+        last_fire_time <- 0
         # the body of the player
-         body <- create_player_body(x, y)
+        body <- create_player_body(x, y)
         # determine IF the player should be rendered OR not
-                    ENDIF
-         isDead <- False
+        isDead <- False
         # determine IF the player should be drawn red
-                    ENDIF
-         isHurt <- False
+        isHurt <- False
         try:
-            for i in  bullet_list:
+            FOR i in  bullet_list:
                 world.DestroyBody(i)
             ENDFOR
-             bullet_list <- []
+            bullet_list <- []
         except:
             # list used to store bullets
-             bullet_list <- []
+            bullet_list <- []
     ENDFUNCTION
 
     FUNCTION shoot(self):
         # fire ammo
         IF  last_fire_time > 10:
             IF  direction = 1:
-                 bullet <- create_bullet( body.position[0] + block_size + 1,  body.position[1])
+                bullet <- create_bullet( body.position[0] + block_size + 1,  body.position[1])
                 IF  bullet = None:
                     RETURN
                 ENDIF
-                 bullet.linearVelocity.x <- 1000 +  body.linearVelocity.x
+                bullet.linearVelocity.x <- 1000 +  body.linearVelocity.x
             ELSEIF  direction = 0:
-                 bullet <- create_bullet( body.position[0] - block_size - 1,  body.position[1])
+                bullet <- create_bullet( body.position[0] - block_size - 1,  body.position[1])
                 IF  bullet = None:
                     RETURN
                 ENDIF
-                 bullet.linearVelocity.x <- -1000 +  body.linearVelocity.x
+                bullet.linearVelocity.x <- -1000 +  body.linearVelocity.x
             # OUTPUT  bullet.linearVelocity.x
             ENDIF
-             bullet.userData <- "bullet"
+            bullet.userData <- "bullet"
             IF len( bullet_list) <= 100:
-                 bullet_list.append( bullet)
+                bullet_list.append( bullet)
             ELSE:
                 world.DestroyBody( bullet_list[0])
-                 bullet_list <-  bullet_list[1:]
-                 bullet_list.append( bullet)
+                bullet_list <-  bullet_list[1:]
+                bullet_list.append( bullet)
             ENDIF
-             last_fire_time <- 0
+            last_fire_time <- 0
         ENDIF
     # hited by enemy
     ENDFUNCTION
 
     FUNCTION hit(self, hitPower=0):
-         life -= hitPower
-              ENDIF
-         isHurt <- True
+        life -= hitPower
+            ENDIF
+        isHurt <- True
         IF  life <= 0:
-             dead()
+            dead()
         ENDIF
     ENDFUNCTION
 
     FUNCTION dead(self):
-         isDead <- True
+        isDead <- True
         world.DestroyBody( body)
     ENDFUNCTION
 
@@ -213,8 +205,8 @@ FUNCTION create_player_body(box_x_pos, box_y_pos):
 ENDFUNCTION
 
 FUNCTION generateBlockFromMap(map):
-    for i in range(0, len(mapArray)):
-        for j in range(0, len(mapArray[i])):
+    FOR i in range(0, len(mapArray)):
+        FOR j in range(0, len(mapArray[i])):
             IF mapArray[i][j] != 255:
                 block <- world.CreateStaticBody(
                     position=(j * block_size, i * block_size),
@@ -223,10 +215,10 @@ FUNCTION generateBlockFromMap(map):
                 block.__SetUserData(data="block")
                 terrainList.append(block)
             ENDIF
+        ENDFOR
+    ENDFOR
 ENDFUNCTION
 
-    ENDFOR
-        ENDFOR
 generateBlockFromMap(mapArray)
 # game terrain setup end
 # create main player core
@@ -238,28 +230,28 @@ enemy <- player(400, 200, 100, 10, 100, 0)
 # load bullet texture
 bulletImage <- pygame.image.load("redbox.png").convert()
 bulletTex <- pygame.transform.scale(bulletImage, (bullet_size, bullet_size))
-                        ENDFOR
+
 # load player texture
 playerImage <- pygame.image.load("player.png").convert()
 playerHurtImage <- pygame.image.load("playerHurt.png").convert()
 playerTex <- pygame.transform.scale(playerImage, (player_size_x, player_size_y))
-                        ENDFOR
+
 # load dirt texture
 dirtImage <- pygame.image.load("dirt.png").convert()
 dirtTex <- pygame.transform.scale(dirtImage, (int(block_size), int(block_size)))
-                      ENDFOR
+
 # load grass texture
 grassImage <- pygame.image.load("grass.png").convert()
 grassTex <- pygame.transform.scale(grassImage, (int(block_size), int(block_size)))
-                       ENDFOR
+
 # load rock texture
 rockImage <- pygame.image.load("rock.png").convert()
 rockTex <- pygame.transform.scale(rockImage, (int(block_size), int(block_size)))
-                      ENDFOR
+
 # load brick texture
 brickImage <- pygame.image.load("brick.png").convert()
 brickTex <- pygame.transform.scale(brickImage, (int(block_size), int(block_size)))
-                       ENDFOR
+
 FUNCTION gameControl():
     global mode
     keys <- pygame.key.get_pressed()
@@ -273,7 +265,6 @@ FUNCTION gamePhysics():
     # get the objects that are colliding
     contactList <- world.__GetContactList_internal()
     # IF there is objects colliding
-      ENDIF
     IF contactList != None:
         # colliding object a AND b
         bodyA <- contactList.__GetFixtureA().__GetBody()
@@ -309,8 +300,8 @@ FUNCTION gamePhysics():
                 core.hit(enemy.power)
             ELSEIF bodyA = enemy.body:
                 enemy.hit(core.power)
-        ENDIF
             ENDIF
+        ENDIF
     # get the camera coordinates as global variable
     ENDIF
     global camera_1_y
@@ -321,17 +312,14 @@ FUNCTION gamePhysics():
     ENDIF
     IF not enemy.isDead:
         enemy.body.__SetLinearVelocity((enemy.body.__GetLinearVelocity()[0], enemy.body.__GetLinearVelocity()[1] - 10))
-    # tick the time to perform physics effect        
+    # tick the time to perFORm physics effect        
     ENDIF
-                          ENDFOR
     world.Step(timeStep, vel_iters, pos_iters)
 ENDFUNCTION
 
 FUNCTION renderBullet(body, tex, size):
     texBox <- pygame.transform.scale(bulletImage, (int(size), int(size)))
-                         ENDFOR
     rotatedTex <- pygame.transform.rotozoom(texBox, math.degrees(body.angle), 1)
-                             ENDFOR
     rotatedTex.set_colorkey(0)
     windowSurface.blit(rotatedTex, (((body.position.x - camera_1_x)) - ((size / 2.0)), (pygame_screen_y - (body.position.y) - ((size / 2.0) - camera_1_y))))
 ENDFUNCTION
@@ -340,35 +328,31 @@ FUNCTION renderPlayer(player):
     # rotate AND draw player core
     IF player.isDead:
         RETURN
-    # rotate AND draw bullet
     ENDIF
-    for bullet in player.bullet_list:
+    # rotate AND draw bullet
+    FOR bullet in player.bullet_list:
         renderBullet(bullet, bulletTex, bullet_size)
-    # IF hited by bullet, turns red
-      ENDIF
     ENDFOR
+    # IF hited by bullet, turns red
     IF player.isHurt:
         playerTex <- pygame.transform.scale(playerHurtImage, (player_size_x, player_size_y))
-                                ENDFOR
+
         player.isHurt <- False
     ELSE:
         playerTex <- pygame.transform.scale(playerImage, (player_size_x, player_size_y))
-                                ENDFOR
-    # find the direction of player
     ENDIF
+    # find the direction of player
+    
     IF player.direction = 0:
         renderTex <- pygame.transform.flip(playerTex, True, False)
-                                ENDFOR
     ELSE:
         renderTex <- pygame.transform.flip(playerTex, False, False)
-                                ENDFOR
+
     # render player to the screen
     ENDIF
     windowSurface.blit(renderTex, (((player.body.position.x - camera_1_x)) - ((player_size_x / 2.0)), (pygame_screen_y - (player.body.position.y) - ((player_size_y / 2.0) - camera_1_y))))
     # draw player's life bar
-                     ENDIF
     pygame.draw.rect(windowSurface, RED, (player.body.position.x - camera_1_x - 10, 460 - bPos2pPos(player.body.position.x, player.body.position.y)[1] + camera_1_y - 10, player.life / 5, 2))
-                                                                                                                                                                                  ENDIF
     # draw player's jet bar
     pygame.draw.rect(windowSurface, WHITE, (player.body.position.x - camera_1_x - 10, 460 - bPos2pPos(player.body.position.x, player.body.position.y)[1] + camera_1_y - 13, player.jet_energy / 5, 2))
 ENDFUNCTION
@@ -386,14 +370,12 @@ FUNCTION renderUI():
     # draw jet bar
     IF core.isDead:
         # draw gameover IF core died
-                        ENDIF
         gameOverFont <- pygame.font.SysFont("consolas", 150)
         gameOverLabel <- gameOverFont.render("PLAYER 2 WINS", int(pygame_screen_x / 2), (255,0,0))
         windowSurface.blit(gameOverLabel, (100, 150))
     ENDIF
     IF enemy.isDead:
         # draw gameover IF core died
-                        ENDIF
         gameOverFont <- pygame.font.SysFont("consolas", 150)
         gameOverLabel <- gameOverFont.render("PLAYER 1 WINS", int(pygame_screen_x / 2), (255,0,0))
         windowSurface.blit(gameOverLabel, (100, 150))
@@ -405,8 +387,8 @@ FUNCTION gameDisplay(playerImage):
     # clean screen
     windowSurface.fill(BLUE)
     # draw ground
-    for i in range(0, len(mapArray)):
-        for j in range(0, len(mapArray[i])):
+    FOR i in range(0, len(mapArray)):
+        FOR j in range(0, len(mapArray[i])):
             # render grass
             IF mapArray[i][j] = 0:
                 windowSurface.blit(grassTex, (bPos2pPos(j * block_size, i * block_size)[0] - 5 - camera_1_x, 465 - bPos2pPos(j * block_size, i * block_size)[1] + camera_1_y))
@@ -423,15 +405,15 @@ FUNCTION gameDisplay(playerImage):
             IF mapArray[i][j] = 64:
                 windowSurface.blit(brickTex, (bPos2pPos(j * block_size, i * block_size)[0] - 5 - camera_1_x, 465 - bPos2pPos(j * block_size, i * block_size)[1] + camera_1_y))
             ENDIF
-    ENDFOR
         ENDFOR
+    ENDFOR
     IF not core.isDead:
         renderPlayer(core)
     ENDIF
     IF not enemy.isDead:
         renderPlayer(enemy)
-    # draw ui on top
     ENDIF
+    # draw ui on top
     renderUI()
     # refresh screen
     pygame.display.flip()
@@ -448,12 +430,11 @@ FUNCTION pyg():
         menuControl()
         menuDisplay()
     ENDIF
-# Prepare for simulation. Typically we use a time step of 1/100 of a
-          ENDFOR
-# second (100Hz) AND 6 velocity/2 position iterations. This provides a
-# high quality simulation in most game scenarios.
 ENDFUNCTION
 
+# Prepare for simulation. Typically we use a time step of 1/100 of a
+# second (100Hz) AND 6 velocity/2 position iterations. This provides a
+# high quality simulation in most game scenarios.
 timeStep <- 1.0 / 100
 vel_iters, pos_iters <- 6, 2
 # This is our little animation loop.

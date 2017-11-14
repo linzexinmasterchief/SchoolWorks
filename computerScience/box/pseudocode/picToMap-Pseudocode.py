@@ -6,4 +6,5 @@ FUNCTION generateMap(map):
     im <- im.convert("L")
     data <- im.getdata()
     data <- np.ndarray.tolist(np.matrix(data).reshape(40,140))
-    RETURN dat
+    RETURN data
+ENDFUNCTION

@@ -44,7 +44,7 @@ mode = "menu"
 
 # set up menu assets
 menu_time_delay = 0
-menu_items = [u"Play 开始",u"Quit 退出"]
+menu_items = [u"Play 开始",u"Help 帮助",u"About 关于",u"Quit 退出"]
 menu_focus = 0
 
 def menuDisplay():
@@ -84,7 +84,7 @@ def menuControl():
                 mode = "game"
                 core.__init__(100, 200, 100, 10, 100, 1)
                 enemy.__init__(1200, 200, 100, 10, 100, 0)
-            if menu_focus == 1:
+            if menu_focus == 3:
                 pygame.quit()
                 sys.exit(0)
         if keys[K_TAB] == 1:
@@ -393,6 +393,86 @@ def pyg():
         menuControl()
         menuDisplay()
 
+# recieve a player target
+def coreControl(core):
+    keys = pygame.key.get_pressed()
+    if not core.isDead:
+        if core.body.__GetLinearVelocity().y <= 0:
+            if core.jet_energy < 100:
+                core.jet_energy += 0.2
+        
+        # left
+        if keys[K_a] == 1:
+            core.body.__SetLinearVelocity((core.body.__GetLinearVelocity().x - 10, core.body.__GetLinearVelocity().y))
+            core.direction = 0
+        # right
+        if keys[K_d] == 1:
+            core.body.__SetLinearVelocity((core.body.__GetLinearVelocity().x + 10, core.body.__GetLinearVelocity().y))
+            core.direction = 1
+        # up
+        if keys[K_w] == 1:
+            if core.jet_energy > 0:
+                core.body.__SetLinearVelocity((core.body.__GetLinearVelocity().x, core.body.__GetLinearVelocity().y + 50))
+                core.jet_energy -= 1.2
+        # down
+        if keys[K_s] == 1:
+            if core.jet_energy > 0:
+                core.body.__SetLinearVelocity((core.body.__GetLinearVelocity().x, core.body.__GetLinearVelocity().y - 25))
+                core.jet_energy -= 0.3
+
+        if keys[K_LSHIFT] == 1:
+            core.body.__SetLinearVelocity((core.body.__GetLinearVelocity().x, core.body.__GetLinearVelocity().y + 100))
+
+        if keys[K_f] == 1:
+            core.shoot()
+        
+        core.last_fire_time += 1
+
+# recieve a player target
+def enemyControl(enemy):
+    keys = pygame.key.get_pressed()
+    if not enemy.isDead:
+        if enemy.body.__GetLinearVelocity().y <= 0:
+            if enemy.jet_energy < 100:
+                enemy.jet_energy += 0.2
+        
+        # left
+        if keys[K_LEFT] == 1:
+            enemy.body.__SetLinearVelocity((enemy.body.__GetLinearVelocity().x - 15, enemy.body.__GetLinearVelocity().y))
+            enemy.direction = 0
+        # right
+        if keys[K_RIGHT] == 1:
+            enemy.body.__SetLinearVelocity((enemy.body.__GetLinearVelocity().x + 15, enemy.body.__GetLinearVelocity().y))
+            enemy.direction = 1
+        # up
+        if keys[K_UP] == 1:
+            if enemy.jet_energy > 0:
+                enemy.body.__SetLinearVelocity((enemy.body.__GetLinearVelocity().x, enemy.body.__GetLinearVelocity().y + 50))
+                enemy.jet_energy -= 1.2
+        # down
+        if keys[K_DOWN] == 1:
+            if enemy.jet_energy > 0:
+                enemy.body.__SetLinearVelocity((enemy.body.__GetLinearVelocity().x, enemy.body.__GetLinearVelocity().y - 25))
+                enemy.jet_energy -= 0.3
+
+        if keys[K_RSHIFT] == 1:
+            enemy.body.__SetLinearVelocity((enemy.body.__GetLinearVelocity().x, enemy.body.__GetLinearVelocity().y + 100))
+
+        if keys[K_SLASH] == 1:
+            enemy.shoot()
+        
+        enemy.last_fire_time += 1
+import numpy as np
+from PIL import Image
+
+def generateMap(map):
+    im = Image.open(map)
+    im = im.transpose(Image.FLIP_TOP_BOTTOM)
+    im = im.convert("L")
+    data = im.getdata()
+    data = np.ndarray.tolist(np.matrix(data).reshape(40,140))
+    
+    return data
 # Prepare for simulation. Typically we use a time step of 1/100 of a
 # second (100Hz) and 6 velocity/2 position iterations. This provides a
 # high quality simulation in most game scenarios.

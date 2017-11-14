@@ -5,3 +5,5 @@ make sure the libraries are all properly installed before launching
 all the libraries could be downloaded through this link (if using windows10 system)(using pip):
 
 	https://www.lfd.uci.edu/~gohlke/pythonlibs/
+
+warning: the program should not be run under python debug mode, it will cause the time to pass in a different speed

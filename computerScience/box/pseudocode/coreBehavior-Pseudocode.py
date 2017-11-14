@@ -6,31 +6,31 @@ FUNCTION coreControl(core):
             IF core.jet_energy < 100:
                 core.jet_energy += 0.2
             ENDIF
-        # left
         ENDIF
+        # left
         IF keys[K_a] = 1:
             core.body.__SetLinearVelocity((core.body.__GetLinearVelocity().x - 10, core.body.__GetLinearVelocity().y))
             core.direction <- 0
-        # right
         ENDIF
+        # right
         IF keys[K_d] = 1:
             core.body.__SetLinearVelocity((core.body.__GetLinearVelocity().x + 10, core.body.__GetLinearVelocity().y))
             core.direction <- 1
-        # up
         ENDIF
+        # up
         IF keys[K_w] = 1:
             IF core.jet_energy > 0:
                 core.body.__SetLinearVelocity((core.body.__GetLinearVelocity().x, core.body.__GetLinearVelocity().y + 50))
                 core.jet_energy -= 1.2
             ENDIF
-        # down
         ENDIF
+        # down
         IF keys[K_s] = 1:
             IF core.jet_energy > 0:
                 core.body.__SetLinearVelocity((core.body.__GetLinearVelocity().x, core.body.__GetLinearVelocity().y - 25))
                 core.jet_energy -= 0.3
-        ENDIF
             ENDIF
+        ENDIF
         IF keys[K_LSHIFT] = 1:
             core.body.__SetLinearVelocity((core.body.__GetLinearVelocity().x, core.body.__GetLinearVelocity().y + 100))
         ENDIF
@@ -38,3 +38,4 @@ FUNCTION coreControl(core):
             core.shoot()
         ENDIF
         core.last_fire_time = core.last_fire_time + 1
+ENDFUNCTION
