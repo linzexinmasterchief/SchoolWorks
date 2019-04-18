@@ -141,12 +141,13 @@ class player:
                 self.bullet = create_bullet(self.body.position[0] + block_size + 1, self.body.position[1])
                 if self.bullet == None:
                     return
-                self.bullet.linearVelocity.x = 1000 + self.body.linearVelocity.x
+                self.bullet.linearVelocity.x = 1000 + 1000 * self.body.linearVelocity.x
+                
             elif self.direction == 0:
                 self.bullet = create_bullet(self.body.position[0] - block_size - 1, self.body.position[1])
                 if self.bullet == None:
                     return
-                self.bullet.linearVelocity.x = -1000 + self.body.linearVelocity.x
+                self.bullet.linearVelocity.x = -1000 + 1000 * self.body.linearVelocity.x
             # print(self.bullet.linearVelocity.x)
             self.bullet.userData = "bullet"
             if len(self.bullet_list) <= 100:
@@ -175,6 +176,7 @@ def create_bullet(box_x_pos, box_y_pos):
         body = world.CreateDynamicBody(position=(box_x_pos, box_y_pos))
         box = body.CreatePolygonFixture(box=(bullet_size / 2.0, bullet_size / 2.0), density=0.001, friction=1)
         body.linearDamping = 0
+        body.isBullet = True
     except:
         return None
     return body
@@ -255,6 +257,7 @@ def gamePhysics():
         bodyB = contactList.__GetFixtureB().__GetBody()
         # case that obj a is bullet
         if bodyA.__GetUserData() == "bullet":
+            print(bodyA.linearVelocity.x)
             # destroy bullet
             world.DestroyBody(bodyA)
             # remove bullet from the bullet list in player
@@ -349,7 +352,7 @@ def renderUI():
         gameOverFont = pygame.font.SysFont("consolas", 150)
         gameOverLabel = gameOverFont.render("PLAYER 1 WINS", int(pygame_screen_x / 2), (255,0,0))
         windowSurface.blit(gameOverLabel, (100, 150))
- 
+
 def gameDisplay(playerImage):
     global gunTex_01
 
